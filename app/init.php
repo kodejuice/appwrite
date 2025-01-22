@@ -1007,7 +1007,7 @@ $register->set('pools', function () {
                         break;
                     case 'queue':
                         $adapter = match ($dsn->getScheme()) {
-                            'redis' => new Queue\Connection\Redis($dsn->getHost(), $dsn->getPort()),
+                            'redis' => new Queue\Connection\Redis('redis'),
                             default => null
                         };
                         break;
